@@ -36,3 +36,22 @@ for rating in ratings {
     averages[rating.key] = (rating.value[0] + rating.value[1]) / 2
     print(rating.key, averages[rating.key]!)
 }
+
+
+var averages: [String:Double] = [ : ]
+
+for rating in ratings {
+    averages[rating.key] = (rating.value[0] + rating.value[1]) / 2
+    print(rating.key, averages[rating.key]!)
+}
+
+let answer = scores.filter({$0>80.0})
+print(answer)
+
+let answer2 = heights.filter({170.0<$0 && $0<174.0})
+print(answer2)
+
+let answer3 = ratings.filter({($0.value[0]+$0.value[1])/2 > 70})
+//print("\(answer3.key)  \(answer3.value[0]+answer3.value[1])")
+let answer_tmp:[String:[Double]]
+print(answer3)
