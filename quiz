@@ -55,3 +55,14 @@ let answer3 = ratings.filter({($0.value[0]+$0.value[1])/2 > 70})
 //print("\(answer3.key)  \(answer3.value[0]+answer3.value[1])")
 let answer_tmp:[String:[Double]]
 print(answer3)
+
+//4번 답
+let answer4 = ratings.filter { rating in
+    (rating.value[0] + rating.value[1]) / 2 > 70
+}
+
+//5번 답
+let answer5 = ratings.map({
+    [$0.key:($0.value[0]+$0.value[1])/2]
+})
+
