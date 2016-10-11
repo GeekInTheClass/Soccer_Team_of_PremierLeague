@@ -1,0 +1,38 @@
+
+let scores:[Double] = [95.3,89.9,93.1,67.5,77.3]
+var res:[Double] = []
+
+for score in scores {
+    if(score > 80.0)
+    {
+        res += [score]
+    }
+}
+
+
+let heights:[Double] = [173.3,168.5,182.4,167.5,177.5,175.3]
+var heightRes:[Double] = []
+
+for height in heights{
+    if(height>170.0 && height<174.0)
+    {
+        heightRes += [height]
+    }
+}
+
+var ratings:[String:[Double]] = ["Amy":[97.5,76.8], "Peter":[58.4,77.4], "Tom":[90.0,12.9], "John":[42.1,98.5], "Michael":[98.3,23.0], "Christina":[32.8,52.4]]
+
+for rating in ratings {
+    var average = (rating.value[0] + rating.value[1]) / 2
+    if (average > 70) {
+        print(rating.key, average)
+    }
+}
+
+
+var averages: [String:Double] = [ : ]
+
+for rating in ratings {
+    averages[rating.key] = (rating.value[0] + rating.value[1]) / 2
+    print(rating.key, averages[rating.key]!)
+}
